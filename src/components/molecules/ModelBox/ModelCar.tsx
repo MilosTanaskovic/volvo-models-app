@@ -3,6 +3,8 @@ import { Row, Col, Flex, View } from 'vcc-ui'
 import { ModelButton, ModelImage } from '../../atoms'
 import { ModelInfo } from './ModelInfo'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 interface Props {
     modelName?: string;
     carType?: string;
@@ -14,7 +16,7 @@ export const ModelCar: React.FC<Props> = ({modelName, carType, modelType, imageC
     return (
         <View
             extend={{
-                minWidth: 250,
+                //minWidth: 250,
             }}
         >
             <ModelInfo
@@ -30,14 +32,15 @@ export const ModelCar: React.FC<Props> = ({modelName, carType, modelType, imageC
                 extend={{
                     flexDirection: 'row',
                     justifyContent: 'space-evenly',
-
-                    padding: 20,
+                    margin: 20,
+                    padding: 10,
                     
                 }}
             >
                 <ModelButton>LEARN</ModelButton>
                 <ModelButton>SHOP</ModelButton>
             </View>
+            
         </View>
     )
 }
