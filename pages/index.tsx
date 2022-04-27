@@ -1,11 +1,15 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import { Footer } from '../components/organisms/Footer'
-import { ModelCars } from '../components/organisms/ModelCars'
-import { NavBar } from '../components/organisms/NavBar'
+import cars from '../public/api/cars.json';
+import { Footer } from '../src/components/organisms/Footer'
+import { ModelCars } from '../src/components/organisms/ModelCars'
+import { NavBar } from '../src/components/organisms/NavBar'
+import { Car, GetCarResults } from '../src/interfaces/car';
+
 import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+
+const Home: NextPage<{ modelCars: Car[] }> = ({modelCars}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,5 +27,12 @@ const Home: NextPage = () => {
     </div>
   )
 }
-
 export default Home
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      modelCars: cars
+    }
+  }
+}
