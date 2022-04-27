@@ -1,4 +1,6 @@
+
 import React from 'react'
+import { Link } from 'vcc-ui'
 
 interface Props {
     children: React.ReactNode;
@@ -6,8 +8,10 @@ interface Props {
 
 export const ModelButton: React.FC<Props> = ({children}) => {
     return (
-        <button>
+        <Link
+            arrow='right'
+        >
             {children}
-        </button>
+        </Link>
     )
 }

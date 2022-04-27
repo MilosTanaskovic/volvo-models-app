@@ -1,4 +1,5 @@
 import React from 'react'
+import { Row, Col, Flex, View } from 'vcc-ui'
 import { ModelButton, ModelImage } from '../../atoms'
 import { ModelInfo } from './ModelInfo'
 
@@ -11,7 +12,11 @@ interface Props {
 
 export const ModelCar: React.FC<Props> = ({modelName, carType, modelType, imageCar}) => {
     return (
-        <div>
+        <View
+            extend={{
+                minWidth: 250,
+            }}
+        >
             <ModelInfo
                 carType={carType}
                 modelName={modelName}
@@ -21,10 +26,18 @@ export const ModelCar: React.FC<Props> = ({modelName, carType, modelType, imageC
                 imageCar={imageCar}
                 modelName={modelName}
             />
-            <div>
+            <View
+                extend={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-evenly',
+
+                    padding: 20,
+                    
+                }}
+            >
                 <ModelButton>LEARN</ModelButton>
                 <ModelButton>SHOP</ModelButton>
-            </div>
-        </div>
+            </View>
+        </View>
     )
 }

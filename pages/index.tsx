@@ -1,11 +1,12 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react';
+import { Block } from 'vcc-ui';
 import cars from '../public/api/cars.json';
 import { Footer } from '../src/components/organisms/Footer'
 import { ModelCars } from '../src/components/organisms/ModelCars'
 import { NavBar } from '../src/components/organisms/NavBar'
-import { Car, GetCarResults } from '../src/interfaces/car';
+import { Car } from '../src/interfaces/car';
 
 import styles from '../styles/Home.module.css'
 
@@ -13,7 +14,7 @@ import styles from '../styles/Home.module.css'
 const Home: NextPage<{ modelCars: Car[] }> = ({modelCars}) => {
   const [cars, setCars] = useState<Car[]>(modelCars);
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Volvo Models Product Page</title>
         <meta name="description" content="Volvo models product page" />
@@ -23,10 +24,17 @@ const Home: NextPage<{ modelCars: Car[] }> = ({modelCars}) => {
       {/* Navbar section */}
       <NavBar />
       {/* Models section */}
-      <ModelCars cars={cars} />
+      <Block
+        as='main'
+        extend={{
+          padding: 20,
+        }}
+      >
+        <ModelCars cars={cars} />
+      </Block>
       {/* Footer Section */}
       <Footer />
-    </div>
+    </>
   )
 }
 export default Home

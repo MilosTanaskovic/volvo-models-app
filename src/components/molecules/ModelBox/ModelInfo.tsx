@@ -1,4 +1,5 @@
 import React from 'react'
+import { Block, Text } from 'vcc-ui'
 
 interface Props {
     carType?: string;
@@ -8,10 +9,27 @@ interface Props {
 
 export const ModelInfo: React.FC<Props> = ({carType, modelName, modelType}) => {
     return (
-        <div>
-            <h3>{carType}</h3>
-            <strong>{modelName}</strong>
-            <p>{modelType}</p>
-        </div>
+        <Block
+         as='div'
+        >
+            <Text
+                as='h3'
+                variant='ootah'
+            >
+                {carType}
+            </Text>
+            <Text 
+                as='span' 
+                variant='amundsen' 
+                subStyle='emphasis'
+            >
+                {modelName}
+            </Text>
+            <Text 
+                as='span'
+            >
+                {modelType}
+            </Text>
+        </Block>
     )
 }

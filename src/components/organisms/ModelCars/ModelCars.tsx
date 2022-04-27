@@ -1,4 +1,5 @@
 import React from 'react'
+import { Flex, Grid } from 'vcc-ui';
 import { Car } from '../../../interfaces/car';
 import { ChevronCircle } from '../../atoms/ChevronCircle'
 import { ModelTitle } from '../../atoms/Title'
@@ -11,13 +12,28 @@ interface Props {
 export const ModelCars: React.FC<Props> = ({cars}) => {
    
     return (
-        <main>
+        <Flex
+            as='section'
+            extend={{
+                gap: 20,
+            }}
+        >
             {/* Title section */}
-            <section>
+            <Flex
+                extend={{
+                    border: '1px solid grey',
+                    textAlign: 'center'
+                }}
+            >
                 <ModelTitle />
-            </section>
+            </Flex>
             {/* ModelContainer section */}
-            <section>
+            <Flex
+                extend={{
+                    flexDirection: 'row',
+                    gap: 20,
+                }}
+            >
                 {cars.map((car) => {
                     const {id, modelName, bodyType, modelType, imageUrl} = car;
                     return(
@@ -30,11 +46,15 @@ export const ModelCars: React.FC<Props> = ({cars}) => {
                         />
                     )
                 })}
-            </section>
+            </Flex>
             {/* Carousel section */}
-            <section>
+            <Flex
+                extend={{
+                    textAlign: 'center',
+                }}
+            >
                 <ChevronCircle />
-            </section>
-        </main>
+            </Flex>
+        </Flex>
     )
 }
