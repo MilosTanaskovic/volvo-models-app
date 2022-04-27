@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
+import { useState } from 'react';
 import cars from '../public/api/cars.json';
 import { Footer } from '../src/components/organisms/Footer'
 import { ModelCars } from '../src/components/organisms/ModelCars'
@@ -10,6 +11,7 @@ import styles from '../styles/Home.module.css'
 
 
 const Home: NextPage<{ modelCars: Car[] }> = ({modelCars}) => {
+  const [cars, setCars] = useState<Car[]>(modelCars);
   return (
     <div className={styles.container}>
       <Head>
@@ -21,7 +23,7 @@ const Home: NextPage<{ modelCars: Car[] }> = ({modelCars}) => {
       {/* Navbar section */}
       <NavBar />
       {/* Models section */}
-      <ModelCars />
+      <ModelCars cars={cars} />
       {/* Footer Section */}
       <Footer />
     </div>

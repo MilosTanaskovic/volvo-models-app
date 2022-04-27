@@ -1,9 +1,13 @@
 import React from 'react'
 
-export const ModelButton: React.FC = () => {
+interface Props {
+    children: React.ReactNode;
+}
+
+export const ModelButton: React.FC<Props> = ({children}) => {
     return (
         <button>
-            Buttons...
+            {children}
         </button>
     )
 }

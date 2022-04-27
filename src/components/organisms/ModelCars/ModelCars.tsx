@@ -1,9 +1,15 @@
 import React from 'react'
+import { Car } from '../../../interfaces/car';
 import { ChevronCircle } from '../../atoms/ChevronCircle'
 import { ModelTitle } from '../../atoms/Title'
 import { ModelCar } from '../../molecules/ModelBox';
 
-export const ModelCars: React.FC = () => {
+interface Props {
+    cars: Car[],
+}
+
+export const ModelCars: React.FC<Props> = ({cars}) => {
+   
     return (
         <main>
             {/* Title section */}
@@ -12,8 +18,18 @@ export const ModelCars: React.FC = () => {
             </section>
             {/* ModelContainer section */}
             <section>
-                ModelContainer
-                <ModelCar />
+                {cars.map((car) => {
+                    const {id, modelName, bodyType, modelType, imageUrl} = car;
+                    return(
+                        <ModelCar 
+                            key={id}
+                            modelName={modelName}
+                            carType={bodyType}
+                            modelType={modelType}
+                            imageCar={imageUrl}
+                        />
+                    )
+                })}
             </section>
             {/* Carousel section */}
             <section>

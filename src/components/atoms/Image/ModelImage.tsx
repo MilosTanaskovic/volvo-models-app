@@ -1,9 +1,20 @@
+import Image from 'next/image'
 import React from 'react'
+import imageLoader from '../../../interfaces/imageLoader'
 
-export const ModelImage: React.FC = () => {
+interface Props {
+    imageCar: string;
+    modelName?: string;
+}
+
+export const ModelImage: React.FC<Props> = ({imageCar, modelName}) => {
     return (
-        <div>
-            Image/next
-        </div>
+        <Image
+            loader={imageLoader}
+            src={imageCar}
+            alt={modelName}
+            width='200'
+            height='200'
+        />
     )
 }
