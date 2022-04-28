@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import imageLoader from '../../../interfaces/imageLoader'
+import imageLoader from '../../../helpers/imageLoader'
 
 interface Props {
     imageCar: string;

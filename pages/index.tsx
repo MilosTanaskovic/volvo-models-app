@@ -37,7 +37,6 @@ const Home: NextPage<{ modelCars: Car[] }> = ({modelCars}) => {
     </>
   )
 }
-export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -46,3 +45,5 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
+
+export default Home

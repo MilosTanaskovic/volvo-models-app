@@ -79,6 +79,7 @@ export const ModelCars: React.FC<Props> = ({cars}) => {
                             <SwiperSlide>
                                 <ModelCar 
                                     key={id}
+                                    modelId={id}
                                     modelName={modelName}
                                     carType={bodyType}
                                     modelType={modelType}

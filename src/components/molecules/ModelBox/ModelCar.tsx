@@ -6,13 +6,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { ModelButton, ModelImage } from '../../atoms';
 
 interface Props {
+    modelId: string;
     modelName?: string;
     carType?: string;
     modelType?: string;
     imageCar: string;
 }
 
-export const ModelCar: React.FC<Props> = ({modelName, carType, modelType, imageCar}) => {
+export const ModelCar: React.FC<Props> = ({modelId, modelName, carType, modelType, imageCar}) => {
     return (
         <View
             extend={{
@@ -39,8 +40,8 @@ export const ModelCar: React.FC<Props> = ({modelName, carType, modelType, imageC
                     
                 }}
             >
-                <ModelButton>LEARN</ModelButton>
-                <ModelButton>SHOP</ModelButton>
+                <ModelButton modelId={modelId}>LEARN</ModelButton>
+                <ModelButton modelId={modelId}>SHOP</ModelButton>
             </View>
         </View>
     )
