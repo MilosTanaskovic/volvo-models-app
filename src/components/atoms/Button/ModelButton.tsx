@@ -5,14 +5,15 @@ import { Link as VCCLink } from 'vcc-ui'
 
 interface Props {
     children: React.ReactNode;
-    modelId?: string;
+    path?: any;
+    arrow?: any | undefined;
 }
 
-export const ModelButton: React.FC<Props> = ({children, modelId}) => {
+export const ModelButton: React.FC<Props> = ({children, path, arrow}) => {
     return (
-        <Link href={`learn/${modelId}`}>
+        <Link href={path}>
             <VCCLink
-                arrow='right'
+                arrow={arrow}
             >
                 {children}
             </VCCLink>

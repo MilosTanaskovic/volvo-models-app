@@ -1,22 +1,19 @@
-
-import React from 'react';
-import { View } from 'vcc-ui';
+import { View } from "vcc-ui";
 import cars from '../../public/api/cars.json';
-import { BackButton } from '../../src/components/atoms';
-import { Car } from '../../src/interfaces/car';
+import { BackButton } from "../../src/components/atoms";
+import { Car } from "../../src/interfaces/car";
 
-const CarPage = ({car}: {car: Car}) => {
-  
+const ShopPage = ({car}: {car: Car}) => {
     return (
         <View>
-            <div>{car.modelName}</div>
+            <div>{car.modelType}</div>
             <BackButton
                 maxWidth={200}
-                path={'/'}
+                path={`/learn/${car.id}`}
                 passHref={true}
-                collor={'secondary'}
+                collor={'destructive'}
             >
-                Go back to Home
+                Go back to Learn
             </BackButton>
         </View>
     )
@@ -37,4 +34,5 @@ export const getStaticProps = async ({params}: { params: {id: string}}) => {
         }
     }
 }
-export default CarPage
+
+export default ShopPage;

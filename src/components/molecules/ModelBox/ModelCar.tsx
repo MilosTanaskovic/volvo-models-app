@@ -1,8 +1,6 @@
 import React from 'react'
-import { Row, Col, Flex, View } from 'vcc-ui'
+import { View } from 'vcc-ui'
 import { ModelInfo } from './ModelInfo'
-
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { ModelButton, ModelImage } from '../../atoms';
 
 interface Props {
@@ -15,11 +13,7 @@ interface Props {
 
 export const ModelCar: React.FC<Props> = ({modelId, modelName, carType, modelType, imageCar}) => {
     return (
-        <View
-            extend={{
-                //minWidth: 250,
-            }}
-        >
+        <View>
             <ModelInfo
                 carType={carType}
                 modelName={modelName}
@@ -35,13 +29,20 @@ export const ModelCar: React.FC<Props> = ({modelId, modelName, carType, modelTyp
                     justifyContent: 'space-evenly',
                     margin: 20,
                     padding: 10,
-                    
-                    
-                    
                 }}
             >
-                <ModelButton modelId={modelId}>LEARN</ModelButton>
-                <ModelButton modelId={modelId}>SHOP</ModelButton>
+                <ModelButton
+                    path={`learn/${modelId}`}
+                    arrow={'right'}
+                >
+                    LEARN
+                </ModelButton>
+                <ModelButton
+                    path={`shop/${modelId}`}
+                    arrow={'right'}
+                >
+                    SHOP
+                </ModelButton>
             </View>
         </View>
     )
