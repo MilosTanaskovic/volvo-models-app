@@ -1,9 +1,16 @@
 import React from 'react'
+import { Logo, View } from 'vcc-ui'
 
-export const LogoVolvo: React.FC = () => {
+interface Props {
+    padding?: string | undefined;
+    height?: number | undefined;
+    type?: any | undefined;
+}
+
+export const LogoVolvo: React.FC<Props> = ({padding, height, type}) => {
     return (
-        <div>
-            Volvo Logo
-        </div>
+        <View padding={padding}>
+            <Logo type={type} height={height} />
+        </View>
     )
 }

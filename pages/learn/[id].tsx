@@ -1,4 +1,5 @@
 
+import Head from 'next/head';
 import React from 'react';
 import { View } from 'vcc-ui';
 import cars from '../../public/api/cars.json';
@@ -8,17 +9,29 @@ import { Car } from '../../src/interfaces/car';
 const CarPage = ({car}: {car: Car}) => {
   
     return (
-        <View>
-            <div>{car.modelName}</div>
-            <BackButton
-                maxWidth={200}
-                path={'/'}
-                passHref={true}
-                collor={'secondary'}
+        <>
+            <Head>
+                <title>Learn Page</title>
+                <meta name="description" content="Learn more for each car model" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <View
+                as='main'
+                extend={{
+                  padding: 20,
+                }}
             >
-                Go back to Home
-            </BackButton>
-        </View>
+                <div>{car.modelName}</div>
+                <BackButton
+                    maxWidth={200}
+                    path={'/'}
+                    passHref={true}
+                    collor={'secondary'}
+                >
+                    Go back to Home
+                </BackButton>
+            </View>
+        </>
     )
 }
 

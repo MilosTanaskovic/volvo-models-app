@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { View } from "vcc-ui";
 import cars from '../../public/api/cars.json';
 import { BackButton } from "../../src/components/atoms";
@@ -5,17 +6,29 @@ import { Car } from "../../src/interfaces/car";
 
 const ShopPage = ({car}: {car: Car}) => {
     return (
-        <View>
-            <div>{car.modelType}</div>
-            <BackButton
-                maxWidth={200}
-                path={`/learn/${car.id}`}
-                passHref={true}
-                collor={'destructive'}
+        <>
+            <Head>
+                <title>Shop Page</title>
+                <meta name="description" content="Shop page" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <View
+                as='main'
+                extend={{
+                  padding: 20,
+                }}
             >
-                Go back to Learn
-            </BackButton>
-        </View>
+                <div>{car.modelType}</div>
+                <BackButton
+                    maxWidth={200}
+                    path={`/learn/${car.id}`}
+                    passHref={true}
+                    collor={'destructive'}
+                >
+                    Go back to Learn
+                </BackButton>
+            </View>
+        </>
     )
 }
 

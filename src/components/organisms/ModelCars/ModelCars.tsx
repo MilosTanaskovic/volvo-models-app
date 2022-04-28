@@ -32,14 +32,13 @@ export const ModelCars: React.FC<Props> = ({cars}) => {
             }}
         >
             {/* Title section */}
-            <Flex
-                extend={{
-                    border: '1px solid grey',
-                    textAlign: 'center'
-                }}
+            <ModelTitle
+                extend={{ textAlign: 'center' }}
+                variant={"cook"}
+                subStyle={"emphasis"}
             >
-                <ModelTitle />
-            </Flex>
+                Our Models
+            </ModelTitle>
             {/* ModelContainer section */}
             <Flex
                 extend={{
