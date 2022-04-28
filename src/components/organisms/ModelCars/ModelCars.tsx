@@ -1,7 +1,6 @@
 import React from 'react'
-import { Flex } from 'vcc-ui';
+import { Flex, View } from 'vcc-ui';
 import { Car } from '../../../interfaces/car';
-import { ChevronCircle } from '../../atoms/ChevronCircle'
 import { ModelTitle } from '../../atoms/Title'
 import { ModelCar } from '../../molecules/ModelBox';
 
@@ -10,12 +9,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import "swiper/css/navigation";
 import 'swiper/css/pagination';
 
 import styles from './ModelCars.module.css';
 
 // import required modules
-import { Pagination } from 'swiper';
+import { Navigation, Pagination } from 'swiper';
+import { ChevronCircleLeft, ChevronCircleRight } from '../../atoms';
 
 interface Props {
     cars: Car[],
@@ -48,8 +49,10 @@ export const ModelCars: React.FC<Props> = ({cars}) => {
                 className={styles.modelCars__container}
             >
                 <Swiper
+                    dir='ltr'
                     slidesPerView={1}
                     spaceBetween={10}
+                    navigation={true}
                     pagination={{
                       clickable: true
 
@@ -57,15 +60,18 @@ export const ModelCars: React.FC<Props> = ({cars}) => {
                     breakpoints={{
                       500: {
                         slidesPerView: 2,
+                        //pagination: true,
                       },
                       768: {
                         slidesPerView: 4,
+                        //pagination: true,
                       },
                       1024: {
                         slidesPerView: 5,
+                        //pagination: false,
                       }
                     }}
-                    modules={[Pagination]}
+                    modules={[Navigation, Pagination]}
                 >
                     {cars.map((car) => {
                         const {id, modelName, bodyType, modelType, imageUrl} = car;
@@ -81,16 +87,21 @@ export const ModelCars: React.FC<Props> = ({cars}) => {
                             </SwiperSlide>
                         )
                     })}
+                    {/* Carousel section */}
+                    {/* <Flex
+                        extend={{
+                            position: 'absolute',
+                            bottom: 0,
+                            right: 290,
+                        }}
+                    > */}
+                    <div>
+                        <ChevronCircleLeft />
+                        <ChevronCircleRight />
+                    </div>
+                        
+                    {/* </Flex> */}
                 </Swiper>
-            </Flex>
-            {/* Carousel section */}
-            <Flex
-                extend={{
-                    textAlign: 'center',
-                    border: '1px solid grey',
-                }}
-            >
-                <ChevronCircle />
             </Flex>
         </Flex>
     )

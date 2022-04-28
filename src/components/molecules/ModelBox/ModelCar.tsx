@@ -1,9 +1,9 @@
 import React from 'react'
 import { Row, Col, Flex, View } from 'vcc-ui'
-import { ModelButton, ModelImage } from '../../atoms'
 import { ModelInfo } from './ModelInfo'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { ModelButton, ModelImage } from '../../atoms';
 
 interface Props {
     modelName?: string;
@@ -24,7 +24,7 @@ export const ModelCar: React.FC<Props> = ({modelName, carType, modelType, imageC
                 modelName={modelName}
                 modelType={modelType}
             />
-            <ModelImage 
+            <ModelImage
                 imageCar={imageCar}
                 modelName={modelName}
             />
@@ -35,12 +35,13 @@ export const ModelCar: React.FC<Props> = ({modelName, carType, modelType, imageC
                     margin: 20,
                     padding: 10,
                     
+                    
+                    
                 }}
             >
                 <ModelButton>LEARN</ModelButton>
                 <ModelButton>SHOP</ModelButton>
             </View>
-            
         </View>
     )
 }

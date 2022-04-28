@@ -1,1 +1,2 @@
-export * from './ChevronCircle';
+export * from './ChevronCircleRight';
+export * from './ChevronCircleLeft';

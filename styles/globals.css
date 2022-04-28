@@ -19,3 +19,21 @@ a {
 .swiper-pagination-bullet-active {
   background: black !important;
 }
+.swiper-button-prev, .swiper-button-next  {
+  color: black !important;
+}
+.swiper-button-next {
+  top: 96% !important;
+  /* font-size: 20px !important; */
+  
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 30px !important;
+}
+.swiper-button-prev {
+  top: 96% !important;
+  right: 40px !important;
+  left: auto !important;
+}
+
+
