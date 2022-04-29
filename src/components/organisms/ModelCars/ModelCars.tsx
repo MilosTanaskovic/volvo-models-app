@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, View } from 'vcc-ui';
+import { Flex, Text, View } from 'vcc-ui';
 import { Car } from '../../../interfaces/car';
 import { ModelTitle } from '../../atoms/Title'
 import { ModelCar } from '../../molecules/ModelBox';
@@ -17,12 +17,15 @@ import styles from './ModelCars.module.css';
 // import required modules
 import { Navigation, Pagination } from 'swiper';
 import { ChevronCircleLeft, ChevronCircleRight } from '../../atoms';
+import { ModeFilter } from '../../molecules';
 
 interface Props {
     cars: Car[],
+    selectedModel?: string;
+    modelChange: (event: any) => void;
 }
 
-export const ModelCars: React.FC<Props> = ({cars}) => {
+export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) => {
    
     return (
         <Flex
@@ -39,6 +42,19 @@ export const ModelCars: React.FC<Props> = ({cars}) => {
             >
                 Our Models
             </ModelTitle>
+            {/* Filter section */}
+            <View
+                extend={{
+                    flexDirection: 'row',
+                    maxWidth: 400
+                }}
+            >
+                <Text variant='amundsen'>Filter by Model :</Text>
+                <ModeFilter 
+                    selectedModel={selectedModel}
+                    modelChange={modelChange}
+                />
+            </View>
             {/* ModelContainer section */}
             <Flex
                 extend={{
