@@ -14,6 +14,18 @@ Try the [demo](https://objective-feynman-98aa01.netlify.app/)
 <a href="https://ibb.co/h1dkVMs"><img src="https://i.ibb.co/YTd6hW2/Screenshot-2022-04-29-at-15-47-07.png" alt="Screenshot-2022-04-29-at-15-47-07" border="0"></a>
 
 ## Clean Architecture ✨
+* Volvo App is break down into smal components and organized into clean arhitecture principle.
+* Volvo App is building using atomic design. Atomic design is methodology for creating design systems. There are five distinct levels in atomic design:
+- Atoms (Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.)
+- Molecules (Things start getting more interesting and tangible when we start combining atoms together. Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.)
+- Organisms (Molecules give us some building blocks to work with, and we can now combine them together to form organisms. Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.)
+- Templates
+- Pages
+* The main focus on this project is: 
+- Browser support for modern ever-green browsers. 👍👍
+- Implement this design using React and Typescript. 👍👍
+- Accessibility. 👍👍
+- Code Structure and reusablity. 👍👍
 
 <a href="https://ibb.co/5F7cWTx"><img src="https://i.ibb.co/L5GpzSh/Screenshot-2022-04-29-at-16-55-35.png" alt="Screenshot-2022-04-29-at-16-55-35" border="0"></a>
 
@@ -27,12 +39,15 @@ Try the [demo](https://objective-feynman-98aa01.netlify.app/)
 
 * In this project is implemented: TypeScript, React/Next.js, Swiper, Css3, VCC-UI.   
 
-* **Home page** - 
-* **Learn page** - 
-* **Shop page** - 
+* **Home page** - featching a list of cars from cars.json file, and implement carousel using modern Swiper models. 
+* **Learn page** - each car by concatating the id of the car to the learn (/learn/) urls.
+* **Shop page** - each car by concatating the id of the car to the shop (/shop/) urls.
+
+
 
 ## Features to add/improve 🔮
-
+- goal is to clone Volvo App (Home, Product and Shop page)
+- build new custom REST APIs using Node.js or expand existing cars.json with new data.
 
 ## Get up and running  🚀
 
@@ -58,7 +73,42 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Source folder structure
 
 ```
+pages ->
+    learn ->
+                    - [id].tsx
+    shop  ->        - [id].tsx
+    _app.tsx
+    index.tsx
+public ->
+    api -> 
+                    - cars.json
+    images
+src ->
+    assets
 
+    components ->
+        atoms ->
+                    - Button
+                    - ChevronCircle
+                    - Image
+                    - Logo
+                    - Title
+                    - index.ts
+        molecules ->
+                    - ModelBox
+                    - SelectInput
+                    - index.ts
+        organisms ->
+                    - NavBar
+                    - ModelCars
+                    - Footer
+                    - index.ts
+    helpers ->
+                    - filterByModel.ts
+                    - imageLoader.ts
+    interfaces ->
+                    - car.ts
+                    
 ```
 <br/><br/>
 # Volvo Cars (Global Online Digital)
@@ -107,39 +157,3 @@ Two extra SVG icons are also provided by our designer which are stored under `do
 
 - If you use our design system component library, [VCC-UI](https://vcc-ui.vercel.app/)
 - If you add a filter bar on the top to filter cars by `bodyType`
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
