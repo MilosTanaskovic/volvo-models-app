@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { View } from "vcc-ui";
+import { Flex, View } from "vcc-ui";
 import cars from '../../public/api/cars.json';
 import { BackButton } from "../../src/components/atoms";
 import { Car } from "../../src/interfaces/car";
@@ -18,7 +18,7 @@ const ShopPage = ({car}: {car: Car}) => {
                   padding: 20,
                 }}
             >
-                <div>{car.modelType}</div>
+                <Flex>{car.modelType}</Flex>
                 <BackButton
                     maxWidth={200}
                     path={`/learn/${car.id}`}

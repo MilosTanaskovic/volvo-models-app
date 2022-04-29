@@ -9,14 +9,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import "swiper/css/zoom";
 import "swiper/css/navigation";
 import 'swiper/css/pagination';
 
 import styles from './ModelCars.module.css';
 
 // import required modules
-import { Navigation, Pagination } from 'swiper';
-import { ChevronCircleLeft, ChevronCircleRight } from '../../atoms';
+import { Zoom, Navigation, Pagination } from 'swiper';
 import { ModeFilter } from '../../molecules';
 
 interface Props {
@@ -67,6 +67,7 @@ export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) =
                     dir='ltr'
                     slidesPerView={1}
                     spaceBetween={10}
+                    zoom={true}
                     navigation={true}
                     pagination={{
                       clickable: true
@@ -86,7 +87,7 @@ export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) =
                         //pagination: false,
                       }
                     }}
-                    modules={[Navigation, Pagination]}
+                    modules={[Zoom, Navigation, Pagination]}
                 >
                     {cars.map((car) => {
                         const {id, modelName, bodyType, modelType, imageUrl} = car;
@@ -103,20 +104,6 @@ export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) =
                             </SwiperSlide>
                         )
                     })}
-                    {/* Carousel section */}
-                    {/* <Flex
-                        extend={{
-                            position: 'absolute',
-                            bottom: 0,
-                            right: 290,
-                        }}
-                    > */}
-                    <div>
-                        <ChevronCircleLeft />
-                        <ChevronCircleRight />
-                    </div>
-                        
-                    {/* </Flex> */}
                 </Swiper>
             </Flex>
         </Flex>

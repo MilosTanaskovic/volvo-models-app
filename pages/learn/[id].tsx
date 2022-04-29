@@ -1,7 +1,7 @@
 
 import Head from 'next/head';
 import React from 'react';
-import { View } from 'vcc-ui';
+import { Flex, View } from 'vcc-ui';
 import cars from '../../public/api/cars.json';
 import { BackButton } from '../../src/components/atoms';
 import { Car } from '../../src/interfaces/car';
@@ -21,7 +21,7 @@ const CarPage = ({car}: {car: Car}) => {
                   padding: 20,
                 }}
             >
-                <div>{car.modelName}</div>
+                <Flex>{car.modelName}</Flex>
                 <BackButton
                     maxWidth={200}
                     path={'/'}

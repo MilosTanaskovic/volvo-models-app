@@ -1,15 +1,11 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { useState, useEffect } from 'react';
-import { Block, View } from 'vcc-ui';
+import { View } from 'vcc-ui';
 import cars from '../public/api/cars.json';
-import { Footer } from '../src/components/organisms/Footer'
 import { ModelCars } from '../src/components/organisms/ModelCars'
 import { filterByModel } from '../src/helpers/filterByModel';
 import { Car } from '../src/interfaces/car';
-
-import styles from '../styles/Home.module.css'
-
 
 const Home: NextPage<{ modelCars: Car[] }> = ({modelCars}) => {
   const [cars, setCars] = useState<Car[]>(modelCars);
