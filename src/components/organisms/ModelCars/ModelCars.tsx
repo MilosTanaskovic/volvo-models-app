@@ -26,7 +26,7 @@ interface Props {
 }
 
 export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) => {
-   
+    
     return (
         <Flex
             as='section'
@@ -53,6 +53,8 @@ export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) =
                 <ModeFilter 
                     selectedModel={selectedModel}
                     modelChange={modelChange}
+                    cars={cars}
+                    
                 />
             </View>
             {/* ModelContainer section */}
@@ -75,16 +77,19 @@ export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) =
                     }}
                     breakpoints={{
                       500: {
+                        width: 500,
                         slidesPerView: 2,
-                        //pagination: true,
+                        pagination: true,
                       },
                       768: {
+                        width: 768,
                         slidesPerView: 4,
-                        //pagination: true,
+                        pagination: true,
                       },
                       1024: {
+                        width: 1024,
                         slidesPerView: 5,
-                        //pagination: false,
+                        pagination: false,
                       }
                     }}
                     modules={[Zoom, Navigation, Pagination]}

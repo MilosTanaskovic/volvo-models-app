@@ -35,4 +35,16 @@ a {
   left: auto !important;
 }
 
+@media screen and (min-width: 1024px) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: none !important;
+  }
+}
+
 

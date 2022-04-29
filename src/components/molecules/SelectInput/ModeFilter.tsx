@@ -1,18 +1,30 @@
 import React from 'react'
 import { SelectInput } from 'vcc-ui'
+import { Car } from '../../../interfaces/car'
 
 interface Props {
     selectedModel?: string;
     modelChange: (event: any) => void;
+    cars: Car[];
 }
 
-export const ModeFilter: React.FC<Props> = ({selectedModel, modelChange}) => {
+export const ModeFilter: React.FC<Props> = ({selectedModel, modelChange, cars}) => {
+    let modelTypes = cars.map(car => car.bodyType);
+    let uniqueModelTypes = Array.from(new Set(modelTypes));
     return (
         <SelectInput label={'Choose favorite Model'} value={selectedModel} onChange={modelChange} >
-            <option value="">All</option>
-            <option value="suv">Suv</option>
-            <option value="estate">Estate</option>
-            <option value="sedan">Sedan</option>
+            {
+                uniqueModelTypes.map((modelType) => {
+                    return(
+                        <option 
+                            key={modelType} 
+                            value={modelType}
+                        >
+                            {modelType.toUpperCase()}
+                        </option>
+                    )
+                })
+            }
         </SelectInput>
     )
 }
