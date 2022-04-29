@@ -16,16 +16,16 @@ Try the [demo](https://objective-feynman-98aa01.netlify.app/)
 ## Clean Architecture ✨
 * Volvo App is break down into smal components and organized into clean arhitecture principle.
 * Volvo App is building using atomic design. Atomic design is methodology for creating design systems. There are five distinct levels in atomic design:
-- Atoms (Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.)
-- Molecules (Things start getting more interesting and tangible when we start combining atoms together. Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.)
-- Organisms (Molecules give us some building blocks to work with, and we can now combine them together to form organisms. Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.)
-- Templates
-- Pages
+    - Atoms (Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.)
+    - Molecules (Things start getting more interesting and tangible when we start combining atoms together. Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.)
+    - Organisms (Molecules give us some building blocks to work with, and we can now combine them together to form organisms. Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.)
+    - Templates
+    - Pages
 * The main focus on this project is: 
-- Browser support for modern ever-green browsers. 👍👍
-- Implement this design using React and Typescript. 👍👍
-- Accessibility. 👍👍
-- Code Structure and reusablity. 👍👍
+    - Browser support for modern ever-green browsers. 👍👍
+    - Implement this design using React and Typescript. 👍👍
+    - Accessibility. 👍👍
+    - Code Structure and reusablity. 👍👍
 
 <a href="https://ibb.co/5F7cWTx"><img src="https://i.ibb.co/L5GpzSh/Screenshot-2022-04-29-at-16-55-35.png" alt="Screenshot-2022-04-29-at-16-55-35" border="0"></a>
 
