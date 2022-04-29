@@ -91,7 +91,7 @@ export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) =
                     {cars.map((car) => {
                         const {id, modelName, bodyType, modelType, imageUrl} = car;
                         return(
-                            <SwiperSlide>
+                            <SwiperSlide key={id}>
                                 <ModelCar 
                                     key={id}
                                     modelId={id}

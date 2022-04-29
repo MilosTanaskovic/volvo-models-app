@@ -8,7 +8,7 @@ interface Props {
 
 export const ModeFilter: React.FC<Props> = ({selectedModel, modelChange}) => {
     return (
-        <SelectInput value={selectedModel} onChange={modelChange} >
+        <SelectInput label={'Choose favorite Model'} value={selectedModel} onChange={modelChange} >
             <option value="">All</option>
             <option value="suv">Suv</option>
             <option value="estate">Estate</option>

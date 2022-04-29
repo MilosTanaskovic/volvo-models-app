@@ -2,7 +2,7 @@ import React from 'react'
 import { Logo, View } from 'vcc-ui'
 
 interface Props {
-    padding?: string | undefined;
+    padding?: number | undefined;
     height?: number | undefined;
     type?: any | undefined;
 }

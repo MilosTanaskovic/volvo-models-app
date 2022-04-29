@@ -11,10 +11,11 @@ export const ModelImage: React.FC<Props> = ({imageCar, modelName}) => {
     return (
         <Image
             loader={imageLoader}
+            unoptimized
             src={imageCar}
             alt={modelName}
-            width='200'
-            height='200'
+            width='200px'
+            height='200px'
         />
     )
 }
