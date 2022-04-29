@@ -46,7 +46,9 @@ export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) =
             <View
                 extend={{
                     flexDirection: 'row',
-                    maxWidth: 400
+                    maxWidth: 400,
+                    marginTop: 30,
+                    marginBottom: 30,
                 }}
             >
                 <Text variant='amundsen'>Filter by Model :</Text>
@@ -79,17 +81,14 @@ export const ModelCars: React.FC<Props> = ({cars, selectedModel, modelChange}) =
                       500: {
                         width: 500,
                         slidesPerView: 2,
-                        pagination: true,
                       },
                       768: {
                         width: 768,
                         slidesPerView: 4,
-                        pagination: true,
                       },
                       1024: {
                         width: 1024,
                         slidesPerView: 5,
-                        pagination: false,
                       }
                     }}
                     modules={[Zoom, Navigation, Pagination]}
