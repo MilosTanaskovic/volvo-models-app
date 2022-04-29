@@ -1,3 +1,57 @@
+# Volvo Product App
+
+A front-end Volvo Product Page built using React/Next.js, TypeScript and Css3. I did this project as assigment for Volvo company.
+Try the [demo](https://objective-feynman-98aa01.netlify.app/)
+
+<a href="https://ibb.co/b65sVMd"><img src="https://i.ibb.co/K5x2gpy/Screenshot-2022-04-29-at-15-45-44.png" alt="Screenshot-2022-04-29-at-15-45-44" border="0"></a>
+
+<a href="https://ibb.co/vLzyt5z"><img src="https://i.ibb.co/44NvQyN/Screenshot-2022-04-29-at-15-46-01.png" alt="Screenshot-2022-04-29-at-15-46-01" border="0"></a>
+
+<a href="https://ibb.co/dPfrD8q"><img src="https://i.ibb.co/7nSXKs5/Screenshot-2022-04-29-at-15-46-22.png" alt="Screenshot-2022-04-29-at-15-46-22" border="0"></a>
+
+<a href="https://ibb.co/D8QfM2d"><img src="https://i.ibb.co/z7ZV2vd/Screenshot-2022-04-29-at-15-46-44.png" alt="Screenshot-2022-04-29-at-15-46-44" border="0"></a>
+
+<a href="https://ibb.co/h1dkVMs"><img src="https://i.ibb.co/YTd6hW2/Screenshot-2022-04-29-at-15-47-07.png" alt="Screenshot-2022-04-29-at-15-47-07" border="0"></a>
+
+## Features ✨
+
+* In this project is implemented: TypeScript, React/Next.js, Swiper, Css3, VCC-UI.   
+
+* **Home page** - 
+* **Learn page** - 
+* **Shop page** - 
+
+## Features to add/improve 🔮
+
+
+## Get up and running  🚀
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Requirements
+
+In the project directory, you can run:
+
+- Node.js
+- NPM
+```javascript
+/* First, Install the needed packages */
+npm install
+
+/* Then start both Node and React */
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br />
+
+## Source folder structure
+
+```
+
+```
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
