@@ -1,7 +1,6 @@
 # Volvo Product App
 
 A front-end Volvo Product Page built using React/Next.js, TypeScript and Css3. I did this project as assigment for Volvo company.
-Try the [demo](https://objective-feynman-98aa01.netlify.app/)
 
 <a href="https://ibb.co/b65sVMd"><img src="https://i.ibb.co/K5x2gpy/Screenshot-2022-04-29-at-15-45-44.png" alt="Screenshot-2022-04-29-at-15-45-44" border="0"></a>
 
